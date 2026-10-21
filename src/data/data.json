@@ -1,0 +1,749 @@
+{
+  "_readme": "Single source of truth for the whole site. Edit text here; components only render it. Add a project by appending to \"projects\".",
+  "site": {
+    "name": "Arun Murali",
+    "title": "Full-stack developer (MERN)",
+    "email": "arunmurali0810@gmail.com",
+    "location": "India",
+    "role": "Sole developer",
+    "socials": {
+      "github": "https://github.com/arun-murali0",
+      "linkedIn": "https://www.linkedin.com/in/arun-murali-17075823b",
+      "x": "https://x.com/Arun0896"
+    },
+    "pageTitle": "Arun Murali — Full-stack developer (MERN)",
+    "scopeNote": "This page distinguishes verified implementation details from in-progress design direction."
+  },
+  "nav": [
+    {
+      "label": "Selected work",
+      "href": "#projects"
+    },
+    {
+      "label": "Approach",
+      "href": "#approach"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": [
+      "Arun Murali",
+      "Full-stack developer",
+      "MERN + Rust"
+    ],
+    "headline": {
+      "before": "I build full-stack products and the ",
+      "highlight": "systems underneath them.",
+      "after": ""
+    },
+    "intro": {
+      "before": "I'm a MERN-stack developer who also works close to the metal. I build React front ends, Node and Express APIs and MongoDB data layers, and I go deeper with queues, containers and Rust when a system needs it. ",
+      "strong": "The common thread is making complex behavior explicit, observable, and testable.",
+      "after": ""
+    },
+    "aside": {
+      "label": "Current focus",
+      "text": "React · Node.js · MongoDB · TypeScript · Rust",
+      "badge": "Building in public"
+    },
+    "primaryCta": {
+      "label": "Explore selected work",
+      "href": "#projects"
+    },
+    "secondaryCta": {
+      "label": "GitHub profile",
+      "href": "https://github.com/arun-murali0"
+    }
+  },
+  "projectsSection": {
+    "label": "Selected work / case studies",
+    "heading": "Full-stack builds. Systems depth.",
+    "intro": "From a MongoDB-backed delivery service to sandboxed code execution and a Rust type checker, each project explores a different layer of the stack.",
+    "reservedNote": "Two more case studies are reserved for the next portfolio update.",
+    "emptyMessage": "No case studies in this category yet."
+  },
+  "approach": {
+    "label": "How I approach the work",
+    "heading": {
+      "before": "Good engineering is a series of ",
+      "highlight": "deliberate decisions."
+    },
+    "intro": "I'm drawn to the parts of software that are easy to hide behind an interface but difficult to get right: data consistency, process isolation, recovery, semantic rules, and the trade-offs between simplicity and scale.",
+    "principles": [
+      {
+        "number": "01",
+        "title": "Make boundaries explicit.",
+        "text": "Separate parsing from semantic reasoning, event acceptance from delivery, and job scheduling from execution."
+      },
+      {
+        "number": "02",
+        "title": "Design for failure.",
+        "text": "Treat crashes, timeouts, stale writes, queue gaps, and retries as normal system states that need a defined path."
+      },
+      {
+        "number": "03",
+        "title": "Back claims with evidence.",
+        "text": "Prefer fixtures, fault scenarios, measured workloads, and clearly documented limitations over broad claims of correctness or scale."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact / links",
+    "heading": {
+      "before": "Have a product or system that needs ",
+      "highlight": "careful engineering?"
+    },
+    "text": "I'm open to full-stack and backend roles. Email is the quickest way to reach me; the source repositories are the best place to follow the work as it evolves.",
+    "emailLabel": "Email me",
+    "githubLabel": "GitHub",
+    "linkedInLabel": "LinkedIn"
+  },
+  "footer": {
+    "tagline": "Built to explain the work."
+  },
+  "filters": [
+    "All work",
+    "Compiler engineering",
+    "Runtime systems",
+    "Distributed delivery"
+  ],
+  "reservedSlots": [
+    {
+      "number": "04",
+      "status": "Next case study"
+    },
+    {
+      "number": "05",
+      "status": "Next case study"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "tsox",
+      "number": "01",
+      "category": "Compiler engineering",
+      "title": "Tsoxide (tsox)",
+      "shortTitle": "tsox",
+      "descriptor": "An experimental TypeScript type checker written in Rust.",
+      "summary": "A semantic checker built on Oxc. The project owns the type core—structural subtyping, inference, control-flow narrowing, cross-file declarations, and diagnostics—without rebuilding the compiler front end.",
+      "tags": [
+        "Rust",
+        "TypeScript",
+        "Oxc",
+        "Type systems"
+      ],
+      "status": "Experimental",
+      "statusTone": "caution",
+      "featured": true,
+      "repositoryUrl": "https://github.com/arun-murali0/tsox",
+      "repositoryLabel": "View source on GitHub",
+      "caseStudy": {
+        "eyebrow": "Compiler engineering / 01",
+        "title": "Build the semantic layer—not another parser.",
+        "subtitle": "Tsoxide explores how much of TypeScript’s type system can live in a Rust implementation while Oxc supplies parsing, AST, symbols, scopes, and other front-end infrastructure.",
+        "snapshot": [
+          {
+            "label": "Implementation",
+            "value": "Rust"
+          },
+          {
+            "label": "Front end",
+            "value": "Oxc"
+          },
+          {
+            "label": "Current baseline",
+            "value": "Cross-file types"
+          },
+          {
+            "label": "Maturity",
+            "value": "Experimental"
+          },
+          {
+            "label": "Role",
+            "value": "Sole developer"
+          }
+        ],
+        "sections": [
+          {
+            "id": "overview",
+            "label": "Overview",
+            "eyebrow": "01 / Overview",
+            "title": "A focused experiment in TypeScript semantics.",
+            "paragraphs": [
+              "A type checker is not just a parser with extra rules. It needs a model of types, structural assignability, expression inference, control-flow narrowing, declaration resolution, and diagnostics that explain why a program does not type-check.",
+              "Tsoxide keeps that semantic work as the center of the project. Oxc handles the mature front-end pieces; the Rust implementation focuses on the type representation and algorithms that make semantic decisions."
+            ],
+            "callout": {
+              "label": "Architectural principle",
+              "text": "Reuse mature syntax infrastructure and make the semantic core explicit, testable, and independently evolvable."
+            }
+          },
+          {
+            "id": "problem",
+            "label": "The problem",
+            "eyebrow": "02 / The problem",
+            "title": "Compatibility is a growing set of semantic contracts.",
+            "paragraphs": [
+              "The challenge is not making a few examples pass. TypeScript features interact: a type can be declared in one file, imported through another, narrowed inside a branch, or inferred from a generic call. A local fix can easily create a mismatch somewhere else.",
+              "The architecture therefore needs stable type identities, clear module boundaries, and regression fixtures that reveal where behavior agrees with or differs from TypeScript."
+            ],
+            "bullets": [
+              "Keep type storage, assignability, inference, narrowing, and diagnostics as inspectable responsibilities.",
+              "Support cross-file declarations without tying portable declarations to one in-memory arena.",
+              "Track behavior through named semantic milestones rather than vague feature-complete claims."
+            ]
+          },
+          {
+            "id": "architecture",
+            "label": "Architecture",
+            "eyebrow": "03 / Architecture",
+            "title": "A front end feeding a purpose-built semantic core.",
+            "paragraphs": [
+              "The system draws a deliberate boundary between syntax-facing infrastructure and the semantic checker. Oxc provides parsed and resolved program structure; a bridge connects declarations and expressions to the checker’s own representations."
+            ],
+            "architecture": [
+              {
+                "step": "01",
+                "title": "Oxc front end",
+                "detail": "TypeScript parsing, AST, symbols, scopes, references, source information, and adopted module-resolution support."
+              },
+              {
+                "step": "02",
+                "title": "Semantic bridge",
+                "detail": "Connects declarations, expressions, imports, bindings, and control flow to the checker."
+              },
+              {
+                "step": "03",
+                "title": "Type core",
+                "detail": "TypeId, arena-backed storage, structural subtyping, inference, narrowing, intersections, and generic substitution."
+              },
+              {
+                "step": "04",
+                "title": "Portable declarations",
+                "detail": "Stable keys and arena-independent declaration data support types moving across file boundaries."
+              },
+              {
+                "step": "05",
+                "title": "Checker results",
+                "detail": "Semantic outcomes and diagnostics are exercised by tests and comparison fixtures."
+              }
+            ]
+          },
+          {
+            "id": "decisions",
+            "label": "Key decisions",
+            "eyebrow": "04 / Engineering decisions",
+            "title": "Put the complexity behind explicit boundaries.",
+            "paragraphs": [
+              "The type system changes as support grows, so the implementation favors explicit identities and small, testable operations over hidden coupling between AST cases. The goal is to make each semantic change local enough to reason about and broad enough to test against real interactions."
+            ],
+            "bullets": [
+              "Use Oxc rather than rebuilding parsing and symbol infrastructure from scratch.",
+              "Represent semantic types with TypeId and arena-backed storage.",
+              "Separate structural comparison from the code that discovers or constructs types.",
+              "Use stable keys and portable declarations to carry type information across files.",
+              "Keep diagnostic codes and messages mapped in a first-class diagnostic layer."
+            ],
+            "callout": {
+              "label": "Trade-off",
+              "text": "A focused implementation avoids duplicated front-end work, but TypeScript compatibility still has to be earned feature by feature."
+            }
+          },
+          {
+            "id": "validation",
+            "label": "Validation",
+            "eyebrow": "05 / Validation",
+            "title": "Use comparisons as evidence, not as a correctness proof.",
+            "paragraphs": [
+              "The repository uses semantic milestones, tests, fixtures, and a TypeScript comparison harness to find mismatches and missing behavior. Cross-file fixtures exercise imports, exports, type visibility, and module interactions.",
+              "The comparison harness is experimental and cannot prove full TypeScript compatibility. The project README explicitly marks Tsoxide as experimental and not production-ready; that status is part of the engineering story rather than a footnote."
+            ],
+            "bullets": [
+              "Milestone-oriented tests cover core semantic behavior.",
+              "Cross-file cases check the movement of declarations between modules.",
+              "Comparison fixtures help distinguish a missing implementation from a behavior mismatch."
+            ],
+            "callout": {
+              "label": "Current status",
+              "text": "Experimental and not production-ready. Support for parts of TypeScript’s type system remains incomplete.",
+              "tone": "caution"
+            }
+          },
+          {
+            "id": "next",
+            "label": "Current direction",
+            "eyebrow": "06 / Current direction",
+            "title": "Extend the type system without losing the shape of the code.",
+            "paragraphs": [
+              "The current repository baseline is cross-file types, with generics substantially implemented across functions, interfaces, type aliases, and classes. There are still known gaps: tuples, keyof, mapped types, and conditional types are not supported yet, and some constructs do not cross files.",
+              "The next work is to close semantic gaps while preserving the boundary between the Oxc bridge, type relations, portable declarations, and diagnostic reporting."
+            ]
+          }
+        ]
+      },
+      "role": "Sole developer"
+    },
+    {
+      "slug": "runtimex",
+      "number": "02",
+      "category": "Runtime systems",
+      "title": "RuntimeX",
+      "shortTitle": "runtimex",
+      "descriptor": "A script execution and runtime observability engine.",
+      "summary": "Submit TypeScript or JavaScript, execute it in an isolated Docker container, stream output live, and inspect execution duration, CPU, memory, exit status, and history.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Docker",
+        "BullMQ",
+        "WebSockets"
+      ],
+      "status": "In development",
+      "statusTone": "progress",
+      "featured": false,
+      "repositoryUrl": "https://github.com/arun-murali0/runtimex",
+      "repositoryLabel": "View source on GitHub",
+      "caseStudy": {
+        "eyebrow": "Runtime systems / 02",
+        "title": "Treat execution as a lifecycle, not a request.",
+        "subtitle": "RuntimeX separates code submission from execution. It queues work, runs each attempt in an ephemeral Docker container, streams stdout and stderr to the browser, and stores the run for later inspection.",
+        "snapshot": [
+          {
+            "label": "Languages",
+            "value": "TypeScript / JavaScript"
+          },
+          {
+            "label": "Isolation",
+            "value": "Docker containers"
+          },
+          {
+            "label": "Queue",
+            "value": "Redis + BullMQ"
+          },
+          {
+            "label": "Maturity",
+            "value": "Side project"
+          },
+          {
+            "label": "Role",
+            "value": "Sole developer"
+          }
+        ],
+        "sections": [
+          {
+            "id": "overview",
+            "label": "Overview",
+            "eyebrow": "01 / Overview",
+            "title": "From submitted code to an inspectable execution.",
+            "paragraphs": [
+              "Running user-provided code means coordinating more than a process launch. The system has to accept a script, queue the work, isolate the runtime, expose output before the run ends, collect resource information, and retain a record when the container exits.",
+              "RuntimeX is a side project for exploring that entire lifecycle. The browser is both the submission surface and the live observation surface, while the worker owns the container execution."
+            ],
+            "callout": {
+              "label": "System principle",
+              "text": "Keep the API responsive by separating job acceptance from the slower, less predictable execution lifecycle."
+            }
+          },
+          {
+            "id": "architecture",
+            "label": "Architecture",
+            "eyebrow": "02 / Architecture",
+            "title": "A queued execution path with a live return channel.",
+            "paragraphs": [
+              "The API transpiles TypeScript to JavaScript in memory using esbuild and enqueues the compiled script. Workers consume jobs and launch ephemeral Docker containers. Output and telemetry return through a separate event path so the UI can follow a run in progress."
+            ],
+            "architecture": [
+              {
+                "step": "01",
+                "title": "React client",
+                "detail": "Submit code in the editor, open a live stream, and inspect run status and output."
+              },
+              {
+                "step": "02",
+                "title": "API + esbuild",
+                "detail": "Validate the submission and transpile TypeScript in memory before enqueueing."
+              },
+              {
+                "step": "03",
+                "title": "Redis + BullMQ",
+                "detail": "Hold execution jobs independently of the request that created them."
+              },
+              {
+                "step": "04",
+                "title": "Worker + Docker",
+                "detail": "Launch an ephemeral container with configured time, memory, CPU, and network limits."
+              },
+              {
+                "step": "05",
+                "title": "Live events + history",
+                "detail": "Redis Pub/Sub and WebSockets stream stdout/stderr; MongoDB stores the completed execution record."
+              }
+            ]
+          },
+          {
+            "id": "isolation",
+            "label": "Isolation",
+            "eyebrow": "03 / Execution boundaries",
+            "title": "Resource limits are part of the product contract.",
+            "paragraphs": [
+              "Each execution runs in a short-lived Docker container that is removed afterward. The repository describes default limits of 128 MB of memory, half a CPU core, no network access, and a 30-second timeout.",
+              "These are useful containment boundaries, not a claim that every hardening control is complete. The project lists stronger isolation work—non-root execution, filesystem restrictions, seccomp and syscall restrictions—as areas to explore next."
+            ],
+            "table": {
+              "headers": [
+                "Control",
+                "Current default / direction"
+              ],
+              "rows": [
+                [
+                  "Memory",
+                  "128 MB default cap"
+                ],
+                [
+                  "CPU",
+                  "0.5 cores"
+                ],
+                [
+                  "Network",
+                  "Disabled"
+                ],
+                [
+                  "Execution time",
+                  "30 seconds"
+                ],
+                [
+                  "Hardening backlog",
+                  "Non-root user, filesystem restrictions, seccomp / syscall controls"
+                ]
+              ]
+            },
+            "callout": {
+              "label": "Security scope",
+              "text": "The isolation boundary is an active area of engineering. RuntimeX should be described as a project exploring sandboxing, not as a hardened public code-hosting service.",
+              "tone": "caution"
+            }
+          },
+          {
+            "id": "observability",
+            "label": "Live observability",
+            "eyebrow": "04 / Runtime observability",
+            "title": "Expose the execution while it is happening.",
+            "paragraphs": [
+              "Container stdout and stderr are published through Redis Pub/Sub and forwarded to the browser over WebSockets. This keeps the terminal experience live rather than forcing a user to wait for the final response.",
+              "Runtime information includes execution duration, CPU usage, memory usage, peak memory, exit code, and status. Completed records keep the raw TypeScript, compiled JavaScript, logs, and metrics in MongoDB for later review."
+            ],
+            "bullets": [
+              "The live stream provides immediate feedback during a run.",
+              "Structured execution metadata helps explain how a run ended.",
+              "Persisted history makes completed runs inspectable after the stream closes."
+            ]
+          },
+          {
+            "id": "decisions",
+            "label": "Design decisions",
+            "eyebrow": "05 / Design decisions",
+            "title": "Separate the queue, the sandbox, and the event stream.",
+            "paragraphs": [
+              "The system has different reliability and latency needs at each stage. Keeping the queue between the API and workers allows the web request to finish before code execution finishes. A distinct event channel handles live output, while the database holds the durable execution history."
+            ],
+            "bullets": [
+              "Transpile TypeScript in memory, avoiding temporary source files before enqueueing.",
+              "Use a job queue to decouple submission from worker availability.",
+              "Make each attempt a disposable container with explicit resource controls.",
+              "Use WebSockets for live output and MongoDB for inspectable history."
+            ],
+            "callout": {
+              "label": "Trade-off",
+              "text": "More moving parts create operational work, but they make queueing, execution, live streaming, and history independently observable."
+            }
+          },
+          {
+            "id": "next",
+            "label": "Next steps",
+            "eyebrow": "06 / Next steps",
+            "title": "Harden the sandbox and improve worker lifecycle controls.",
+            "paragraphs": [
+              "The project README lists worker health monitoring, execution cancellation, stronger container isolation, detailed runtime metrics, distributed workers, retry handling, and execution scheduling as follow-up areas.",
+              "The next meaningful step is to validate failure behavior end to end: what happens when a worker dies, a client disconnects, a run times out, or a container reaches a resource limit."
+            ]
+          }
+        ]
+      },
+      "role": "Sole developer"
+    },
+    {
+      "slug": "relaycore",
+      "number": "03",
+      "category": "Distributed delivery",
+      "title": "RelayCore",
+      "shortTitle": "relaycore",
+      "descriptor": "A multi-tenant webhook delivery service.",
+      "summary": "A durable delivery path for events: persist first, queue the slow work, sign outbound requests, retry temporary failures, isolate tenants, and recover jobs the queue misses.",
+      "tags": [
+        "Node.js",
+        "TypeScript",
+        "MongoDB",
+        "Redis",
+        "BullMQ"
+      ],
+      "status": "Architecture in development",
+      "statusTone": "progress",
+      "featured": false,
+      "repositoryUrl": "https://github.com/arun-murali0/relaycore",
+      "repositoryLabel": "View source on GitHub",
+      "caseStudy": {
+        "eyebrow": "Distributed systems / 03",
+        "title": "Accept the event fast. Make delivery resilient.",
+        "subtitle": "RelayCore separates event acceptance from outbound webhook delivery. Its architecture centers on a persistent delivery record, a Redis/BullMQ work queue, independently scalable workers, and a sweeper that repairs gaps between the database and queue.",
+        "snapshot": [
+          {
+            "label": "API",
+            "value": "Node.js + TypeScript"
+          },
+          {
+            "label": "System of record",
+            "value": "MongoDB"
+          },
+          {
+            "label": "Queue",
+            "value": "Redis + BullMQ"
+          },
+          {
+            "label": "Delivery model",
+            "value": "At-least-once"
+          },
+          {
+            "label": "Maturity",
+            "value": "Early development"
+          },
+          {
+            "label": "Role",
+            "value": "Sole developer"
+          }
+        ],
+        "sections": [
+          {
+            "id": "overview",
+            "label": "Overview",
+            "eyebrow": "01 / Overview",
+            "title": "Do not make a producer wait on someone else’s server.",
+            "paragraphs": [
+              "A webhook sender cannot control the receiver’s latency or availability. Calling a customer endpoint inline makes the producer inherit slow responses, timeouts, configuration errors, and bursts of traffic from every downstream system.",
+              "RelayCore moves that uncertainty onto a delivery path that can be retried and inspected. The API validates the event, authenticates its tenant, persists the event and delivery records, and schedules background work; workers own the outbound HTTP request."
+            ],
+            "callout": {
+              "label": "Primary requirement",
+              "text": "Accept events quickly without silently losing accepted work. The design target is under 100 ms p99 for event acceptance; that is a target, not a claimed benchmark."
+            }
+          },
+          {
+            "id": "architecture",
+            "label": "Architecture",
+            "eyebrow": "02 / Architecture",
+            "title": "Keep the API fast path separate from the slow path.",
+            "paragraphs": [
+              "The API and worker are separate processes from one codebase. The API is stateless and can scale behind a load balancer; workers can scale with delivery lag and average customer latency. MongoDB remains the record of truth for tenants, endpoints, events, and deliveries, while Redis/BullMQ coordinates work and delayed retries."
+            ],
+            "architecture": [
+              {
+                "step": "01",
+                "title": "Producer / dashboard",
+                "detail": "Internal services submit events; tenants inspect delivery history and re-drive failures."
+              },
+              {
+                "step": "02",
+                "title": "API process",
+                "detail": "Authenticate tenant, rate limit, validate payload, save event and per-endpoint deliveries, then enqueue jobs and return 202."
+              },
+              {
+                "step": "03",
+                "title": "MongoDB + Redis/BullMQ",
+                "detail": "MongoDB is the system of record; Redis/BullMQ schedules immediate and delayed delivery work."
+              },
+              {
+                "step": "04",
+                "title": "Worker process",
+                "detail": "Atomically claim a delivery, check the endpoint circuit, HMAC-sign the request, send it with a timeout, and persist the outcome."
+              },
+              {
+                "step": "05",
+                "title": "Sweeper + operations",
+                "detail": "Re-enqueue pending work with no job, recover stuck attempts, purge retained data, and expose metrics for delivery lag."
+              }
+            ]
+          },
+          {
+            "id": "consistency",
+            "label": "Consistency model",
+            "eyebrow": "03 / Persistence and recovery",
+            "title": "Persist first, then enqueue—and design for the gap.",
+            "paragraphs": [
+              "The database write and Redis enqueue are not one atomic transaction. If the API process crashes after writing the event and deliveries but before the queue job is created, a pending delivery can be left without a job. RelayCore deliberately uses a sweeper to reconcile this gap instead of introducing a transactional outbox at this stage.",
+              "This trades immediate repair for a simpler architecture: in the described design, the gap may delay delivery by roughly a minute. The durable delivery rows make the work discoverable and rebuildable if Redis loses jobs or becomes temporarily unavailable."
+            ],
+            "bullets": [
+              "A unique tenant + idempotency key prevents duplicate event creation.",
+              "Workers use an atomic conditional claim instead of a separate distributed lock service.",
+              "The sweeper re-enqueues stale pending/retrying deliveries and recovers attempts stuck in processing.",
+              "Queue state coordinates work; the database remains the source of truth."
+            ],
+            "callout": {
+              "label": "Consistency trade-off",
+              "text": "Repair is eventual rather than instantaneous. The design prioritizes recovering accepted work with a simpler persistence model."
+            }
+          },
+          {
+            "id": "delivery",
+            "label": "Delivery semantics",
+            "eyebrow": "04 / Delivery and retries",
+            "title": "Choose duplicates over silent loss.",
+            "paragraphs": [
+              "Exactly-once delivery over ordinary HTTP is not a guarantee the sender can make: a receiver may process a request while its response is lost. Retrying may produce a duplicate, but declining to retry may lose an event. RelayCore chooses at-least-once delivery and exposes a stable event identifier so receivers can deduplicate.",
+              "Retries depend on the failure class. Temporary infrastructure and network errors retry with exponential backoff and jitter. Permanent 4xx responses fail immediately, while a per-endpoint circuit breaker pauses attempts against endpoints that are repeatedly unhealthy."
+            ],
+            "table": {
+              "headers": [
+                "Failure",
+                "Planned behavior"
+              ],
+              "rows": [
+                [
+                  "Timeout / connection failure",
+                  "Retry with backoff and jitter"
+                ],
+                [
+                  "408 / 429 / 5xx response",
+                  "Retry; respect endpoint recovery behavior"
+                ],
+                [
+                  "Other 4xx response",
+                  "Mark failed; treat as a configuration problem"
+                ],
+                [
+                  "Repeated endpoint failures",
+                  "Open its circuit; delay work without consuming retry attempts"
+                ],
+                [
+                  "Retry budget exhausted",
+                  "Keep a failed record for inspection and manual retry"
+                ],
+                [
+                  "Worker dies mid-attempt",
+                  "Recover the stale processing record and re-enqueue"
+                ]
+              ]
+            },
+            "callout": {
+              "label": "Receiver contract",
+              "text": "Receivers must be idempotent. A stable event ID supports deduplication but does not make the network request exactly-once."
+            }
+          },
+          {
+            "id": "tenancy-security",
+            "label": "Tenancy and security",
+            "eyebrow": "05 / Security boundaries",
+            "title": "Isolation must be built into every query and outbound request.",
+            "paragraphs": [
+              "Tenant identity comes from credentials, not from a tenant ID supplied in the request body. Tenant-owned database queries are scoped by tenant, and foreign or missing resources use the same not-found behavior to avoid leaking cross-tenant existence.",
+              "Each endpoint has a signing secret. The worker signs timestamped request content with HMAC-SHA256; receivers can verify authenticity and reject stale requests. URL validation and redaction are part of the safe-by-default boundary because customer-controlled webhook URLs create SSRF and secret-leak risks."
+            ],
+            "bullets": [
+              "Store only a keyed hash of long, random API keys for authentication lookup.",
+              "Apply per-tenant rate limits and concurrency-aware scheduling so one tenant cannot starve others.",
+              "Use endpoint-specific circuits to protect worker capacity from one failing customer.",
+              "Validate and resolve destination URLs carefully; the current design documents DNS rebinding as a remaining gap to close by pinning the resolved IP."
+            ],
+            "callout": {
+              "label": "Known security work",
+              "text": "Signing secrets are currently described as plaintext at rest; envelope encryption with a KMS is a next step. DNS resolution must also be pinned through the actual request to close the rebinding gap.",
+              "tone": "caution"
+            }
+          },
+          {
+            "id": "observability",
+            "label": "Operational visibility",
+            "eyebrow": "06 / Observability",
+            "title": "Make “why did it not arrive?” answerable from the product.",
+            "paragraphs": [
+              "Each delivery should expose its attempts, outcome, next retry time, and relevant response details, connected with a request ID. Operators should not have to reconstruct a customer incident by grepping through opaque logs.",
+              "The most useful early signals are delivery lag and queue depth, backed by API p99 latency and Redis memory. The design also includes readiness behavior, structured logs, and operational endpoints so load balancers can stop routing traffic to an unhealthy API instance."
+            ],
+            "bullets": [
+              "Track the age of the oldest pending delivery to detect queue lag.",
+              "Keep attempt history and failure classes available for each delivery.",
+              "Expose metrics for queue states, API latency, and stale writes.",
+              "Add distributed traces later; request-ID context is the intended seam for OpenTelemetry."
+            ]
+          },
+          {
+            "id": "scaling",
+            "label": "Scaling plan",
+            "eyebrow": "07 / Scaling plan",
+            "title": "Scale workers with delivery lag, not only CPU.",
+            "paragraphs": [
+              "The initial shape is one API process, one worker, managed MongoDB, and Redis. Since the API is stateless, it can be replicated behind a load balancer. Workers can be added independently, and their useful throughput depends heavily on concurrency and how long customer endpoints take to respond.",
+              "For example, ten concurrent slots at an average 300 ms customer response time yield roughly 33 deliveries per second per worker before overhead. This is capacity arithmetic to guide a load test, not a measured benchmark."
+            ],
+            "table": {
+              "headers": [
+                "Stage",
+                "Design direction"
+              ],
+              "rows": [
+                [
+                  "One box",
+                  "One API + one worker; tune worker concurrency and establish delivery-lag baselines."
+                ],
+                [
+                  "Horizontal scale",
+                  "N API replicas and M workers; autoscale workers on queue depth / oldest pending age."
+                ],
+                [
+                  "Noisy tenants",
+                  "Per-tenant queues or weighted consumption; enforce per-tenant concurrency caps."
+                ],
+                [
+                  "Very high throughput",
+                  "Shard queues across Redis or move to a managed queue; shard/archive MongoDB delivery history."
+                ],
+                [
+                  "Multi-region",
+                  "Regional workers close to receivers, with a global control plane."
+                ]
+              ]
+            },
+            "callout": {
+              "label": "Preserved seam",
+              "text": "The delivery state machine, retry policy, idempotency, signing, and tenant model should remain independent of the specific queue adapter."
+            }
+          },
+          {
+            "id": "tradeoffs",
+            "label": "Trade-offs and next steps",
+            "eyebrow": "08 / Trade-offs and next steps",
+            "title": "Keep the first design simple, and document what it costs.",
+            "paragraphs": [
+              "Redis/BullMQ provides delayed jobs and a familiar Node.js integration, but adds another stateful service. MongoDB keeps flexible payloads and an approachable scaling path, but a future transactional reporting model may justify Postgres and an outbox. An in-memory token-bucket or fixed-window limiter is not a multi-process coordination mechanism; this design currently uses Redis counters for tenant rate limiting.",
+              "The repository is early in development, so the architecture should be presented as a design with explicit failure analysis—not as a claim that every scaling stage or recovery path has already been production-proven."
+            ],
+            "bullets": [
+              "Envelope-encrypt endpoint signing secrets with a KMS.",
+              "Pin validated DNS results through the outbound request to close rebinding gaps.",
+              "Add endpoint concurrency limits and distributed traces.",
+              "Test queue loss, worker death, duplicate claims, idempotent submission, and shutdown behavior with repeatable fault scenarios."
+            ],
+            "callout": {
+              "label": "Current maturity",
+              "text": "Early development. The architecture and its failure model are intentionally more detailed than the current implementation status; shipped coverage must be verified separately.",
+              "tone": "caution"
+            }
+          }
+        ]
+      },
+      "role": "Sole developer"
+    }
+  ]
+}
